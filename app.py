@@ -210,6 +210,8 @@ print("Started download thread")
 
 app_vars = ChainMap(os.environ, app_defaults)
 
-app.run(host=app_vars['YDL_SERVER_HOST'], port=app_vars['YDL_SERVER_PORT'], debug=True)
+port = int(os.environ.get("PORT", 5000))
+
+app.run(host=app_vars['YDL_SERVER_HOST'], port=port, debug=True)
 done = True
 dl_thread.join()
