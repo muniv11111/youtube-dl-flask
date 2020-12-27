@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 import urllib
 import json
 
-app = Flask(__name__,static_url_path='/tmp')
+app = Flask(__name__,static_url_path='/youtube-dl')
 
 
 app_defaults = {
@@ -22,7 +22,7 @@ app_defaults = {
     'YDL_EXTRACT_AUDIO_FORMAT': None,
     'YDL_EXTRACT_AUDIO_QUALITY': '192',
     'YDL_RECODE_VIDEO_FORMAT': None,
-    'YDL_OUTPUT_TEMPLATE': '/youtube-dl/%(title)s [%(id)s].%(ext)s',
+    'YDL_OUTPUT_TEMPLATE': '/tmp/%(title)s [%(id)s].%(ext)s',
     'YDL_ARCHIVE_FILE': None,
     'YDL_SERVER_HOST': '0.0.0.0',
     'YDL_SERVER_PORT': 8080,
