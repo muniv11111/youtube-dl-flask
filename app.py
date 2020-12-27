@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 import urllib
 import json
 
-app = Flask(__name__,static_url_path='/youtube-dl')
+app = Flask(__name__,static_url_path='/tmp')
 
 
 app_defaults = {
